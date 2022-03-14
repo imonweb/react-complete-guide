@@ -1,11 +1,14 @@
-import ExpenseItem from "./components/ExpenseItem"
-import Expenses from "./components/Expenses"
+// import ExpenseItem from "./components/ExpenseItem"
+import React from "react"
+import Expenses from "./components/Expenses/Expenses"
 
-function App() {
+// function App() {
+const App = () => {
+
   const expenses = [
     {
       id: "e1",
-      title: "Toilet Paper",
+      title: "Tissue Paper",
       amount: 94.12,
       date: new Date(2022, 7, 14),
     },
@@ -23,13 +26,16 @@ function App() {
       date: new Date(2022, 5, 12),
     },
   ]
+ 
 
-  return (
-    <div>
-      <h2>Let's get started!</h2>
-      <Expenses items={expenses} />
-    </div>
-  )
+  return React.createElement("div", {}, React.createElement("h2", {}, "Let's get started!"), React.createElement(Expenses, { items: expenses }))
+
+  // return (
+  //   <div>
+  //     <h2>Let's get started!</h2>
+  //     <Expenses items={expenses} />
+  //   </div>
+  // )
 }
 
 export default App
