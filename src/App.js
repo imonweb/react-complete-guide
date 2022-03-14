@@ -1,10 +1,11 @@
 // import ExpenseItem from "./components/ExpenseItem"
 import React from "react"
+
+import NewExpense from "./components/NewExpense/NewExpense"
 import Expenses from "./components/Expenses/Expenses"
 
 // function App() {
 const App = () => {
-
   const expenses = [
     {
       id: "e1",
@@ -26,16 +27,15 @@ const App = () => {
       date: new Date(2022, 5, 12),
     },
   ]
- 
 
-  return React.createElement("div", {}, React.createElement("h2", {}, "Let's get started!"), React.createElement(Expenses, { items: expenses }))
+  // return React.createElement("div", {}, React.createElement("h2", {}, "Let's get started!"), React.createElement(Expenses, { items: expenses }))
 
-  // return (
-  //   <div>
-  //     <h2>Let's get started!</h2>
-  //     <Expenses items={expenses} />
-  //   </div>
-  // )
+  return (
+    <div>
+      <NewExpense />
+      <Expenses items={expenses} />
+    </div>
+  )
 }
 
 export default App
